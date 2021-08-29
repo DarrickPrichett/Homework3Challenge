@@ -27,14 +27,11 @@ function generatePassword () {
 
   
   if (Number.isNaN(resultNumChara) ){
-    
+    console.log(resultNumChara);
     alert('Use Numbers between 8-128');
     return;
   };
-  if(resultNumChara == 'numbers'){
-    resultNumChara = resultNumChara;
-    console.log(resultNumChara);
-  }
+  
 
   let resultUpper = confirm('Would you like to use Uppercase letters?');
   if (resultUpper) {
@@ -61,6 +58,7 @@ function generatePassword () {
     console.log(allPasswordOptions);
   }
 
+  for (int i =0; i< resultNumChara; i++) {
 
   function getRandomNumber(min, max){
     let step1 = max - min + 1;
@@ -68,6 +66,7 @@ function generatePassword () {
     let passwordEl = Math.floor(step2) + min;
     return passwordEl;
   }
+}
   console.log(allPasswordOptions);
   console.log(getRandomNumber(0, allPasswordOptions.length -1));
   randomNum = getRandomNumber(0, allPasswordOptions.length -1);
