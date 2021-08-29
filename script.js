@@ -66,8 +66,16 @@ function generatePassword () {
     let passwordEl = Math.floor(step2) + min;
     return passwordEl;
   }
+  console.log(allPasswordOptions);
+  console.log(getRandomNumber(0, allPasswordOptions.length -1));
+  randomNum = getRandomNumber(0, allPasswordOptions.length -1);
+  randomElement = allPasswordOptions[randomNum];
+  console.log(randomElement);
 
-  generatePasswordOptions()
+
+  return 'randomElement';
+
+  generatePasswordOptions(allPasswordOptions)
 }
 
   // Write password to the #password input
