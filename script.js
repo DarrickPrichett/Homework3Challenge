@@ -56,6 +56,7 @@ function generatePassword () {
   if (resultNumbers) {
     allPasswordOptions = allPasswordOptions.concat(numbers)
     console.log(resultNumbers);
+    console.log(allPasswordOptions);
   }
 
 
