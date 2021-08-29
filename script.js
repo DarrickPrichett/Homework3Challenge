@@ -58,13 +58,10 @@ function generatePassword () {
     console.log(allPasswordOptions);
   }
 
-  for (int i =0; i< resultNumChara; i++) {
+  for (let i = 0; i< resultNumChara; i++) {
 
-  function getRandomNumber(min, max){
-    let step1 = max - min + 1;
-    let step2 = Math.random() * step1;
-    let passwordEl = Math.floor(step2) + min;
-    return passwordEl;
+  function getRandomNumber(resultNumChara) {
+    return (Math.floor(Math.random() * resultNumChara));
   }
 }
   console.log(allPasswordOptions);
@@ -72,15 +69,13 @@ function generatePassword () {
   randomNum = getRandomNumber(0, allPasswordOptions.length -1);
   randomElement = allPasswordOptions[randomNum];
   console.log(randomElement);
-
-
-  return 'randomElement';
+  return randomElement;
 
   generatePasswordOptions(allPasswordOptions)
-}
+
 
   // Write password to the #password input
-  function writePassword() {
+  function writePassword(password) {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
@@ -89,4 +84,5 @@ function generatePassword () {
   }
 
 // Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
 generateBtn.addEventListener("click", writePassword);
