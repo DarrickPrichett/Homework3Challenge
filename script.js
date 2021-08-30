@@ -65,7 +65,7 @@ function generatePassword () {
  
 }
   console.log(allPasswordOptions);
-  console.log(getRandomNumber(0, allPasswordOptions.length -1));
+  console.log(getRandomNumber(allPasswordOptions.length));
 
 }
   // Write password to the #password input
